@@ -1,0 +1,81 @@
+##Basic c
+
+#include <stdio.h>
+
+void printinfo(char name[],int age){
+
+        printf("Name : %s\n",name);
+        printf("Age  : &d\n",age);
+
+}
+void getinput (char name[] ,int *age){
+
+            printf ("Enter your name : ");
+            scanf("%s",name);
+
+            printf ("Enter your age :  ");
+            scanf("%d", age);
+}
+
+
+int main (){
+
+    char  name[50];
+    int   age;
+
+getinput( name,&age);
+printf("\n------Your information-----\n");
+
+printinfo(name,age);
+
+
+
+
+return 0;
+}
+
+
+###|FORK
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main (){
+
+
+for (int i=0;i<3;i++){
+
+    fork();
+
+    printf("Iteration %d - THIS IS FORK LOOP .\n child id : %d \n and parent ID :  %d\n",i,getpid(),getppid()) ;
+}
+    return 0;
+}
+
+
+##THREAD
+
+
+public class hellothread {
+
+public static void main(String[] args){
+
+Thread t = new Thread(() -> {
+
+
+
+System.out.println("THIS FROM THREAD --  hello world!/n"  );
+
+});
+
+
+ t.start();
+
+
+   System.out.println("FROM  Main --- Hello world!\n");
+}
+}
+
+
+
+
